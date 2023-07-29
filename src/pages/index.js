@@ -1,6 +1,6 @@
 import ProductCardList from "@/components/ui/Card/PostCardList";
 import Footer from "@/components/ui/Footer/Footer";
-import Navbar from "@/components/ui/Navbar/Navbar";
+import Navbar from "@/components/Navbar";
 import TabList from "@/components/ui/Tab/TabList";
 import CategoryList from "../../configs/const/Categories";
 import { useState, useEffect } from "react";
@@ -102,7 +102,7 @@ export default function Home() {
   };
 
   return (
-    <main className="flex flex-col min-h-screen">
+    <main className="flex flex-col min-h-screen bg-slate-900">
       <div className="flex-shrink-0">
         <Navbar />
       </div>

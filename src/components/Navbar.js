@@ -1,5 +1,6 @@
-import Auth from "../Auth/Auth";
+import Auth from "./ui/Auth/Auth";
 import { useSession } from "next-auth/react";
+import Image from "next/image";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -16,17 +17,18 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 z-20 w-full bg-white border-b border-gray-300 dark:bg-gray-900 dark:border-gray-600">
+    <nav className="fixed top-0 left-0 z-20 w-full bg-slate-900 border-b border-gray-300 dark:bg-gray-900 dark:border-gray-600">
       <div className="flex flex-wrap items-center justify-between w-2/3 p-4 mx-auto">
         <a href="/?category=all" className="flex items-center">
-          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-            Sport Finder
+        {/* <img src="./img/logo.png" className='h-12' alt='logo'/> */}
+          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white text-white">
+            BTB-Sport Center
           </span>
         </a>
-        <div className="flex md:order-2">
+        <div className="flex md:order-2 gap-3">
           <button
             onClick={handleCreatePost}
-            className="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+            className='bg-[#ff3366] p-2 px-3 text-white h-min rounded-full' size='sm' 
           >
             Create a Post
           </button>

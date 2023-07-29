@@ -1,7 +1,7 @@
 import { useState } from "react";
 import FileImport from "@/components/ui/FileImport/FileImport";
 import Footer from "@/components/ui/Footer/Footer";
-import Navbar from "@/components/ui/Navbar/Navbar";
+import Navbar from "@/components/Navbar";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { doc, setDoc } from "firebase/firestore";
