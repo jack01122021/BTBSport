@@ -10,6 +10,9 @@
   },
   "dependencies": {
     "@auth/firebase-adapter": "^1.0.0",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.14.2",
     "autoprefixer": "10.4.14",
     "filepond-plugin-image-exif-orientation": "^1.0.11",
     "filepond-plugin-image-preview": "^4.6.11",

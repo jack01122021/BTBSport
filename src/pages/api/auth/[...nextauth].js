@@ -7,8 +7,8 @@ export const authOptions = {
   // Configure one or more authentication providers
   providers: [
     GoogleProvider({
-      clientId: process.env.GOOGLE_CLIENT_ID,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+      clientId: "763659957824-9pqejjfqd5rqbfdm40ii3ttll113dtu3.apps.googleusercontent.com",
+      clientSecret: "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",
     }),
   ],
   adapter: FirestoreAdapter({

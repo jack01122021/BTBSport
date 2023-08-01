@@ -87,8 +87,8 @@ export default function Sell() {
       await setDoc(doc(db, "posts", Date.now().toString()), {
         ...formData,
         locationImage: imageUrl,
-        username: session.user.name,
-        userImage: session.user.image,
+        // username: session.user.name,
+        // userImage: session.user.image,
       });
 
       toast.success("Post is created Successfully");
@@ -151,6 +151,7 @@ export default function Sell() {
                 <option value="football">Football</option>
                 <option value="table tennis">Table Tennis</option>
                 <option value="volleyball">Volleyball</option>
+                <option value="badminton">Badminton</option>
               </select>
             </div>
 
@@ -179,10 +180,10 @@ export default function Sell() {
                 htmlFor="number_of_players"
                 className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
               >
-                Number of Players
+                size
               </label>
               <input
-                type="number"
+                type="text"
                 name="numberPlayer"
                 value={formData.numberPlayer}
                 onChange={handleInputChange}
@@ -243,7 +244,7 @@ export default function Sell() {
                   htmlFor="cost"
                   className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
-                  Cost Per Person
+                  Price:
                 </label>
                 <div className="flex">
                   <span
@@ -252,12 +253,12 @@ export default function Sell() {
                     className="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-500 bg-gray-100 border border-gray-300 rounded-l-lg focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600"
                     type="button"
                   >
-                    USD
+                    USD:
                   </span>
                   <div className="relative w-full">
                     <input
                       id="cost"
-                      type="number"
+                      type="text"
                       name="cost"
                       onChange={handleInputChange}
                       className="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-r-lg border-l-gray-50 border-l-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-l-gray-700  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500"

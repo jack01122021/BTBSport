@@ -15,6 +15,7 @@ import {
   limit,
 } from "firebase/firestore";
 import { db } from "../../utils/firebase";
+import PhotoSlide from "@/components/Slide/SlideShow";
 
 export default function Home() {
   const router = useRouter();
@@ -104,7 +105,9 @@ export default function Home() {
   return (
     <main className="flex flex-col min-h-screen bg-slate-900">
       <div className="flex-shrink-0">
+      
         <Navbar />
+    
       </div>
       <div className="mt-20" />
       <TabList
@@ -112,6 +115,7 @@ export default function Home() {
         selectedCategory={selectedCategory}
         setSelectedCategory={handleSelectedCategory}
       />
+          <PhotoSlide/>
       <div className="flex-grow">
         <ProductCardList data={posts} />
       </div>
